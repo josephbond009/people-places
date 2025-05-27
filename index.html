@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="non-modals">
+      <nav>
+        <img src="images/Group 13.png" alt="spots-logo" />
+        <span>SPOTS</span>
+      </nav>
+
+      <header>
+        <div class="profile-img">
+          <img src="images/Avatar.png" alt="Avatar" class="profile-pic" />
+        </div>
+
+        <div class="header-info">
+          <div>
+            <h1 class="header-name">Bessie Coleman</h1>
+            <span class="header-title">Civil Aviator</span>
+          </div>
+
+          <div class="edit-info">
+            <span class="edit-profile">✎ Edit Profile</span>
+            <button class="new-post">＋ New Post</button>
+          </div>
+        </div>
+      </header>
+
+      <main class="container"></main>
+    </div>
+
+    <!-- <section class="modal">
+        <div>
+
+        </div>
+    </section> -->
+
+    <!-- Edit Profile Modal -->
+    <section id="editModal" class="modal-overlay">
+      <div class="modal-space">
+        <div class="modal-content">
+          <h2>Edit Profile</h2>
+          <form id="editForm">
+            <label>
+              Name:
+              <input type="text" id="nameInput" placeholder="Enter full name" />
+            </label>
+
+            <label>
+              Title:
+              <input type="text" id="titleInput" placeholder="Enter title" />
+            </label>
+
+            <label>
+              Upload Avatar:
+              <input type="file" id="avatarInput" accept="image/*" />
+            </label>
+
+            <div class="modal-buttons">
+              <button type="submit">Save</button>
+              <button type="button" id="closeModal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Preview Modal -->
+    <section id="imagePreviewModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="previewImage" src="" alt="Preview" />
+        <p id="previewTitle"></p>
+      </div>
+    </section>
+
+    <!-- New Post Modal -->
+    <section id="newPostModal" class="modal">
+      <div class="modal-content">
+        <h2>New Post</h2>
+        <form id="newPostForm">
+          <label>
+            Image:
+            <input type="file" id="newImageInput" accept="image/*" required />
+          </label>
+          <label>
+            Title:
+            <input
+              type="text"
+              id="newTitleInput"
+              placeholder="Enter image title"
+              required
+            />
+          </label>
+          <div class="modal-buttons">
+            <button type="submit">Post</button>
+            <button type="button" id="closeNewPostModal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

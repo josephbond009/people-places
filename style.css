@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    background-color: #FCF5E5;
+}
+
+nav {
+    text-align: center;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+nav > span {
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+nav > img {
+    height: 16px;
+    margin-top: 4px;
+}
+
+header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    width: 100%;
+    border-bottom: 1px solid #D0CABD;
+    
+}
+
+.profile-pic {
+    width: 190px;
+    height: 190px;
+    border-radius: 0.6rem;
+}
+
+.header-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 1.5rem;
+}
+
+.edit-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+}
+
+.edit-info button {
+    padding: 0.4rem 0.7rem;
+    background-color: #212121;
+    border: #221f1f;
+    color: #FFFFFF;
+    border-radius: 0.3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    /* border: 1px solid #D0CABD; */
+    gap: 1.5rem;
+}
+
+.card-space {
+    display: flex;
+    gap: 2.8rem;
+}
+
+.card-space .img-card {
+    border-radius: 1rem;
+    width: 24.5rem;
+    height: 24.5rem;
+    margin-bottom: 0.3rem;
+}
+
+.img-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-text span {
+    font-size: 1.25;
+    line-height: 1.2;
+}
+
+/* .like {
+    background-color: red;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 100%;
+} */
+
+.cliked {
+    height: 23px;
+    width: 25px;
+}
+
+
+
+.modal-overlay {
+    display: none;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+.modal-space {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border: 1px solid blue;
+}
+
+.modal-content h2 {
+    margin-bottom: 1rem;
+}
+
+.modal-content label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="file"] {
+    width: 100%;
+    padding: 0.4rem;
+    margin-top: 0.3rem;
+    border-radius: 0.4rem;
+    border: 1px solid #ccc;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.modal-buttons button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.modal-buttons button:first-child {
+    background-color: #212121;
+    color: white;
+}
+
+.modal-buttons button:last-child {
+    background-color: #ccc;
+    color: #212121;
+}
+
+
+
+/* Modal base styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content container */
+.modal-content {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+
+/* Previewed image */
+#previewImage {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+/* Title below image */
+#previewTitle {
+  font-size: 1.2rem;
+  margin-top: 0.8rem;
+  color: #333;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 0.7rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #888;
+}
+
+.close:hover {
+  color: #000;
+}
+
+
+
+@media (max-width: 540px) {
+    body {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+
+    header {
+        flex-direction: column;
+    }
+
+    .header-info {
+        align-items: center;
+        margin-left: -1rem;
+        gap: 1rem;
+    }
+
+    .edit-info {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile-pic {
+            width: 30%;
+            height: 30%;
+        }
+
+    .card-space {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-card {
+        width: 100%;
+        max-width: 20rem;
+        height: auto;
+        max-height: 20rem;
+    }
+
+    .modal-content {
+        width: 90%;
+        max-width: 300px;
+    }
+
+}
+
+.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
